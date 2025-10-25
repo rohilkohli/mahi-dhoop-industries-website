@@ -15,17 +15,18 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Story', href: '#about' },
-    { name: 'Shop', href: '#products' },
-    { name: 'Journal', href: '#contact' },
+    { name: 'Home', href: '#home' },
+    { name: 'Products', href: '#products' },
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/98 backdrop-blur-md shadow-lg' 
-          : 'bg-white/95 backdrop-blur-sm shadow-sm'
+          ? 'bg-white shadow-md' 
+          : 'bg-white shadow-sm'
       }`}
     >
       <nav className="container mx-auto px-6 py-4">
@@ -34,15 +35,14 @@ const Header = () => {
           <Logo />
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center space-x-12">
+          <ul className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="relative text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-300 group"
+                  className="text-gray-700 hover:text-orange-600 transition-colors duration-300 font-medium"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
             ))}
@@ -51,7 +51,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-primary focus:outline-none"
+            className="md:hidden p-2 text-gray-700 hover:text-orange-600 focus:outline-none"
             aria-label="Toggle menu"
           >
             <svg
@@ -84,7 +84,7 @@ const Header = () => {
                 <a
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="block text-gray-700 hover:text-primary transition-colors duration-300"
+                  className="block text-gray-700 hover:text-orange-600 transition-colors duration-300"
                 >
                   {link.name}
                 </a>

@@ -36,37 +36,21 @@ const ProductGrid = () => {
   ];
 
   return (
-    <section id="products" className="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white relative">
-      {/* Top Accent Line */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
-
+    <section id="products" className="py-20 md:py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-20 relative">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-            Our Collection
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-serif">
+            Our Products
           </h2>
-          <p className="text-xl text-gray-600 font-light italic">
+          <p className="text-lg text-gray-600">
             Crafted with care, blessed with tradition
           </p>
-          
-          {/* Decorative underline */}
-          <div className="mt-6 flex justify-center">
-            <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
-          </div>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              imageUrl={product.imageUrl}
-              title={product.title}
-              price={product.price}
-              features={product.features}
-            />
-          ))}
+        {/* Products Grid - Placeholder for now */}
+        <div className="min-h-[300px]">
+          {/* Empty placeholder matching the screenshot */}
         </div>
       </div>
     </section>
